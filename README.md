@@ -73,6 +73,8 @@ To solve the "Valid Anagram" problem efficiently, you can use a hash table (dict
 ```python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        if len(s)!=len(t):
+            return False
         hashtable = set()
         for c in s:
             hashtable.add(c)

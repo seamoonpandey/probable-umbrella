@@ -1,5 +1,5 @@
 class Solution:
-    def containDuplicate(self, nums: List[int]) -> bool:
+    def containDuplicate(self, nums) -> bool:
         hashset = set()
         for n in nums:
             if n in hashset:
@@ -11,10 +11,9 @@ class Solution:
 # Create an instance of the Solution class
 solution = Solution()
 
-# Test the containDuplicate method with a list of integers
-nums = [1, 2, 3, 4, 5]
-result = solution.containDuplicate(nums)
-if result:
-    print("There are duplicate elements in the list.")
-else:
-    print("There are no duplicate elements in the list.")
+input_str = input("Enter a list of integers separated by commas: ")
+
+# Convert the input string into a list of integers
+nums = [int(x) for x in input_str.split(',')]
+
+print(solution.containDuplicate(nums))

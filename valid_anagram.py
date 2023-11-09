@@ -1,14 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s)!=len(t):
-            return False
-        hashtable = set()
-        for c in s:
-            hashtable.add(c)
-        for c in t:
-            if c not in hashtable:
-                return False
-        return True
+        return sorted(s) == sorted(t)
 
 # Create instance of the Solution class
 solution = Solution()
